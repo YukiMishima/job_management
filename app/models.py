@@ -30,7 +30,8 @@ class Job(models.Model):
 
     send_date = models.DateField(
         verbose_name='投げた日',
-        default=timezone.now)
+        default=timezone.now,
+    )
 
     get_date = models.DateField(
         verbose_name='返ってきた日',

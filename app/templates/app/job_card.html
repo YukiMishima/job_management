@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-3">
+        <p>名前</p>
+    </div>
+    <div class="col-9">
+        <p>{{ job.name }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>担体</p>
+    </div>
+    <div class="col-9">
+        <p>{{ job.get_support_display }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>備考</p>
+    </div>
+    <div class="col-9">
+        <p>{{ job.memo|linebreaksbr }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>投げた日</p>
+    </div>
+    <div class="col-9">
+        <p>{{ job.send_date|date:"Y/m/d" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>返ってきた日</p>
+    </div>
+    <div class="col-9">
+        <p>{{ job.get_date|date:"Y/m/d" }}</p>
+    </div>
+</div>
