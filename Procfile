@@ -1,1 +1,1 @@
-web: gunicorn job-management-for-my-research.wsgi --log-file -
+web: gunicorn project.wsgi --log-file -
