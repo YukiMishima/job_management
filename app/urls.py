@@ -1,4 +1,5 @@
 from django.urls import path
+from . import views
 from .views import JobFilterView, JobDetailView, JobCreateView, JobUpdateView, JobDeleteView
 
 
@@ -13,4 +14,6 @@ urlpatterns = [
     path('update/<int:pk>/', JobUpdateView.as_view(), name='update'),
     # 削除画面
     path('delete/<int:pk>/', JobDeleteView.as_view(), name='delete'),
+    # outcar画面
+    path('outcar/', views.OutcarView, name='outcar'),
 ]

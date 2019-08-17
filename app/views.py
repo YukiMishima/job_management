@@ -3,6 +3,8 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django_filters.views import FilterView
+from django.views.generic import TemplateView
+from django.shortcuts import render
 
 from .models import Job
 from .filters import JobFilter
@@ -59,3 +61,6 @@ class JobUpdateView(LoginRequiredMixin, UpdateView):
 class JobDeleteView(LoginRequiredMixin, DeleteView):
     model = Job
     success_url = reverse_lazy('index')
+
+def OutcarView(request):
+    return render(request, 'app/outcar.html')
