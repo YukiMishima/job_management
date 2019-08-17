@@ -1,0 +1,16 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Methane</title>
+</head>
+<body>
+<script type="text/javascript" src="{% static 'app/js/Jmol.js' %}"></script> 
+<script type="text/javascript">
+Jmol.Info.j2sPath = "{% static 'app/js/j2s' %}"
+jmolApplet(300, "load {% static 'app/js/H2O2_01.xyz' %}");
+// ファイルを読み込んで、300X300のサイズで表示する。
+</script>
+</body>
+</html>
